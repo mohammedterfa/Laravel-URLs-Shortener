@@ -25,3 +25,4 @@ Route::get('/dashboard', function () {
 require __DIR__.'/auth.php';
 
 Route::post('/short', [ShortUrlController::class, 'short'])->name('short.url');
+Route::get('/{code}', [ShortUrlController::class, 'show'])->name('short.show');
